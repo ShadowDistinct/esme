@@ -1,0 +1,53 @@
+body {
+    background: linear-gradient(to bottom, #000428, #004e92);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Stars */
+.star {
+    position: absolute;
+    width: 3px; /* Size of the star */
+    height: 3px;
+    background: #fff; /* Star color */
+    border-radius: 50%; /* Makes it a circle */
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+/* Star Button */
+.star-button {
+    display: inline-block; /* Makes it behave like text for easier centering */
+    width: 50px; /* Adjust size */
+    height: 50px;
+    background: #FFD700; /* Gold star color */
+    clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    ); /* Star shape */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6);
+    margin: 20px auto; /* Centers horizontally */
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.star-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.9);
+}

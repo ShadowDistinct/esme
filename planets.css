@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+    color:#FFD700;
+    font-family: Space, sans-serif;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+#slider {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 1600px;
+    margin: auto
+}
+
+.subcontainer{
+    width: 85%;
+    margin: auto;
+}
+
+.controller{
+    display: flex;
+    justify-content: space-between;
+}
+
+#controls i{
+    color: white;
+    font-size: 1rem
+}
+
+.previous, .next{
+    padding: 2px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    transition: 0,7s ease-in-out;
+    border: 3px solid white;
+    background-color: black;
+    box-shadow: 0 0 5px #bbb;
+}
+
+.previous:hover, .next:hover{
+    border: 3px solid gray;
+}
+
+.slide-img {
+    width: 200px; /* Set a specific size for the image */
+    height: 200px; /* Set the same height to make it a perfect circle */
+    background-position: center; /* Ensures the background image is centered */
+    background-size: cover; /* Ensures the image covers the entire circle */
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    transition: 0.5s;
+    border-radius: 50%; /* This will make the image round */
+    overflow: hidden; /* Ensures the content stays within the circular border */
+    margin: 0 auto; /* Centers the .slide-img element within its parent */
+}
+
+.slide-img:hover{
+    box-shadow: 0 0 0 200px black inset;
+}
+
+.slide-img a{
+    text-decoration: none;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+}
+
+.slide-img:hover a{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.planet-1{
+     background-image: url(Venus.png);
+     background-size: cover;
+}
+.planet-2{
+     background-image: url(Neptune.png);
+     background-size: cover;
+}
+.planet-3{
+     background-image: url(Jupiter.png);
+     background-size: cover;
+}
+.planet-4{
+     background-image: url(Earth.png);
+     background-size: cover;
+}
+.planet-5{
+    background-image: url('Saturn.png'); /* Update with the correct path to your Saturn image */
+    background-size: contain; /* Ensures the entire image fits inside the circle */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling if the image doesn't fill the circle */
+}
+
+@media(max-width:1600px){
+    .container{
+        width: 100%;
+    }
+}
+
+
